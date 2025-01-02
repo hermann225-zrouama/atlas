@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: 'https://github.com/kubeflow/manifests.git'
     targetRevision: HEAD
-    path: ''
+    path: 'exemple/'
     kustomize:
       namePrefix: 'kubeflow-'
   project: default
