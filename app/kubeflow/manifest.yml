@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kubeflow
+  namespace: argocd
+spec:
+  destination:
+    name: 'kubeflow'
+    namespace: kubeflow
+    server: 'https://kubernetes.default.svc'
+  source:
+    repoURL: 'https://github.com/kubeflow/manifests.git'
+    targetRevision: HEAD
+    path: ''
+    kustomize:
+      namePrefix: 'kubeflow-'
+  project: default
